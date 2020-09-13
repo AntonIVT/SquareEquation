@@ -1,0 +1,114 @@
+\hypertarget{EquationSolver_8cpp}{}\doxysection{Equation\+Solver.\+cpp File Reference}
+\label{EquationSolver_8cpp}\index{EquationSolver.cpp@{EquationSolver.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for Equation\+Solver.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{EquationSolver_8cpp_a8c5f39d66feec10d6bd35630b3389937}\label{EquationSolver_8cpp_a8c5f39d66feec10d6bd35630b3389937}} 
+\#define {\bfseries I\+N\+F\+I\+N\+I\+T\+E\+\_\+\+S\+O\+L\+V\+ES}~-\/1
+\item 
+\mbox{\Hypertarget{EquationSolver_8cpp_a002b2f4894492820fe708b1b7e7c5e70}\label{EquationSolver_8cpp_a002b2f4894492820fe708b1b7e7c5e70}} 
+\#define {\bfseries E\+P\+S\+I\+L\+ON}~1E-\/6
+\item 
+\mbox{\Hypertarget{EquationSolver_8cpp_ac80a3592e72fd96b772ee47a7d8e0d0a}\label{EquationSolver_8cpp_ac80a3592e72fd96b772ee47a7d8e0d0a}} 
+\#define {\bfseries D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}
+\item 
+\mbox{\Hypertarget{EquationSolver_8cpp_abb1b8808c7879e2a3e271d7a44dc16ea}\label{EquationSolver_8cpp_abb1b8808c7879e2a3e271d7a44dc16ea}} 
+\#define {\bfseries N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+T\+E\+S\+TS}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{EquationSolver_8cpp_a0a0ee9007b375e9a413c417db32b3fbd}{Approximation}} (double $\ast$x)
+\item 
+int \mbox{\hyperlink{EquationSolver_8cpp_ae25dc5aad6334e7a442884f286f999da}{Square\+Equation\+Solver}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\item 
+int \mbox{\hyperlink{EquationSolver_8cpp_a929ca68f7c1890041fc1042069d1b0de}{Line\+Equation\+Solver}} (double b, double c, double $\ast$x1, double $\ast$x2)
+\item 
+int \mbox{\hyperlink{EquationSolver_8cpp_a43173b40278b3353755b6b386a63f2d0}{Input}} (double $\ast$a, double $\ast$b, double $\ast$c)
+\item 
+void \mbox{\hyperlink{EquationSolver_8cpp_afd590f44da46704ce44e9bcd8d10df05}{Unit\+Test}} ()
+\item 
+void \mbox{\hyperlink{EquationSolver_8cpp_ac3df8d763779dd05bfa3d47eeef9e57f}{Manual\+Input}} ()
+\item 
+int \mbox{\hyperlink{EquationSolver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{EquationSolver_8cpp_a0a0ee9007b375e9a413c417db32b3fbd}\label{EquationSolver_8cpp_a0a0ee9007b375e9a413c417db32b3fbd}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!Approximation@{Approximation}}
+\index{Approximation@{Approximation}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{Approximation()}{Approximation()}}
+{\footnotesize\ttfamily void Approximation (\begin{DoxyParamCaption}\item[{double $\ast$}]{x }\end{DoxyParamCaption})}
+
+Approximate x with precision 1E-\/6 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em x} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{EquationSolver_8cpp_a43173b40278b3353755b6b386a63f2d0}\label{EquationSolver_8cpp_a43173b40278b3353755b6b386a63f2d0}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!Input@{Input}}
+\index{Input@{Input}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily int Input (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+Input coefficents a, b, c \mbox{[}in\mbox{]} a pointer to the coef a \mbox{[}in\mbox{]} b pointer to the coef b \mbox{[}in\mbox{]} c pointer to the coef c \mbox{\Hypertarget{EquationSolver_8cpp_a929ca68f7c1890041fc1042069d1b0de}\label{EquationSolver_8cpp_a929ca68f7c1890041fc1042069d1b0de}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!LineEquationSolver@{LineEquationSolver}}
+\index{LineEquationSolver@{LineEquationSolver}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{LineEquationSolver()}{LineEquationSolver()}}
+{\footnotesize\ttfamily int Line\+Equation\+Solver (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Solves line equation bx + c = 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & b-\/coef \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & c-\/coef \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & pointer to the first root \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & pointer to the second root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{EquationSolver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{EquationSolver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!main@{main}}
+\index{main@{main}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{EquationSolver_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} \mbox{\Hypertarget{EquationSolver_8cpp_ac3df8d763779dd05bfa3d47eeef9e57f}\label{EquationSolver_8cpp_ac3df8d763779dd05bfa3d47eeef9e57f}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!ManualInput@{ManualInput}}
+\index{ManualInput@{ManualInput}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{ManualInput()}{ManualInput()}}
+{\footnotesize\ttfamily void Manual\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Solves one equation from terminal \mbox{\Hypertarget{EquationSolver_8cpp_ae25dc5aad6334e7a442884f286f999da}\label{EquationSolver_8cpp_ae25dc5aad6334e7a442884f286f999da}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!SquareEquationSolver@{SquareEquationSolver}}
+\index{SquareEquationSolver@{SquareEquationSolver}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{SquareEquationSolver()}{SquareEquationSolver()}}
+{\footnotesize\ttfamily int Square\+Equation\+Solver (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+Solves a square equation ax$^\wedge$2 + bx + c = 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & a-\/coef \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & b-\/coef \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & c-\/coef \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & pointer to the first root \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & pointer to the second root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{EquationSolver_8cpp_afd590f44da46704ce44e9bcd8d10df05}\label{EquationSolver_8cpp_afd590f44da46704ce44e9bcd8d10df05}} 
+\index{EquationSolver.cpp@{EquationSolver.cpp}!UnitTest@{UnitTest}}
+\index{UnitTest@{UnitTest}!EquationSolver.cpp@{EquationSolver.cpp}}
+\doxysubsubsection{\texorpdfstring{UnitTest()}{UnitTest()}}
+{\footnotesize\ttfamily void Unit\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unit\+Test input 10 tests from in.\+txt and check result 
